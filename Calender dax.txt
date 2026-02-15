@@ -1,0 +1,60 @@
+Calendar =
+
+VAR MinDate = MIN(Tickets[Date])
+VAR MaxDate = MAX(Tickets[Date])
+VAR NumberOfDays = MaxDate - MinDate + 1
+
+RETURN
+GENERATE(
+    CALENDAR(MinDate, MaxDate),
+    ROW(
+        "Year", YEAR([Date]),
+        "Month", MONTH([Date]),
+        "Quarter", QUARTER([Date]),
+        "WeekNumber", WEEKNUM([Date]),
+        "DayOfMonth", DAY([Date]),
+        "DayOfWeek", WEEKDAY([Date], 2),
+        "Week Type", IF(WEEKDAY([Date], 2) > 5, "Weekend", "Weekday"), -- Single column indicating 'Weekend' or 'Weekday'
+        "MonthName", FORMAT([Date], "MMM"),
+        "QuarterName", "Q" & QUARTER([Date]) & " " & YEAR([Date]),
+        "WeekYear", YEAR([Date]) & "-" & WEEKNUM([Date]),
+        "WeekStartDate", [Date] - WEEKDAY([Date], 2) + 1,
+        "WeekEndDate", [Date] + (7 - WEEKDAY([Date], 2)),
+        "Week Name", FORMAT([Date], "ddd")
+    )
+)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Calendar =
+
+VAR MinDate = MIN(Tickets[Date])
+VAR MaxDate = MAX(Tickets[Date])
+
+RETURN
+ADDCOLUMNS(
+    CALENDAR(MinDate, MaxDate),
+
+    "Year", YEAR([Date]),
+    "Month", MONTH([Date]),
+    "Quarter", QUARTER([Date]),
+    "WeekNumber", WEEKNUM([Date]),
+    "DayOfMonth", DAY([Date]),
+    "DayOfWeek", WEEKDAY([Date], 2),
+
+    "Week Type",
+        IF(
+            WEEKDAY([Date], 2) > 5,
+            "Weekend",
+            "Weekday"
+        ),
+
+    "MonthName", FORMAT([Date], "MMM"),
+    "QuarterName", "Q" & QUARTER([Date]) & " " & YEAR([Date]),
+    "WeekYear", YEAR([Date]) & "-" & WEEKNUM([Date]),
+
+    "WeekStartDate", [Date] - WEEKDAY([Date], 2) + 1,
+    "WeekEndDate", [Date] + (7 - WEEKDAY([Date], 2)),
+
+    "Week Name", FORMAT([Date], "ddd")
+)
