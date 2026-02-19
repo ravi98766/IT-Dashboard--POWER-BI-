@@ -384,6 +384,8 @@ Title Month =
  VAR _selectedmeasure =SELECTEDVALUE('Switch measure'[Switch measure Order])
  RETURN
  IF(_selectedmeasure=0,"Monthly SLA Compliance Trend ","Monthly SLA Non Compliance Trend")
+```
+```
 Title Priority = 
  VAR _selectedmeasure =SELECTEDVALUE('Switch measure'[Switch measure Order])
  RETURN
