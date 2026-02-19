@@ -183,6 +183,7 @@ Time-series growth from 2016–2020.
 _____________________________________________________________________________________________________________________________________________________________________________
 # Tooltip 1 – Monthly Ticket & Satisfaction Snapshot
 <img width="363" height="456" alt="Tooltip 1" src="https://github.com/user-attachments/assets/434aa2be-f447-4891-9d38-3aa1a40ab820" />
+<img width="878" height="491" alt="D3 with Tooltip1" src="https://github.com/user-attachments/assets/71208674-9756-4218-86d1-b62e790bba99" />
 
 Contextual drill-down view.
 
@@ -208,6 +209,7 @@ Satisfaction Labels
 ______________________________________________________________________________________________________________________________________________________________
 # Tooltip 2 – Hardware SLA Status
 <img width="255" height="232" alt="Tooltip 2" src="https://github.com/user-attachments/assets/b06fce9c-f5d5-443c-906a-dcdad108b177" />
+<img width="882" height="490" alt="D3 with Tooltip2" src="https://github.com/user-attachments/assets/df4744c1-8646-40d3-8b6b-90e0121f0d83" />
 
 Category-specific SLA view.
 
@@ -221,6 +223,8 @@ Category-specific SLA view.
 
 ________________________________________
 # Tooltip 3 – High Priority SLA & Satisfaction
+<img width="245" height="336" alt="Tooltip 3" src="https://github.com/user-attachments/assets/2167141e-6510-444b-8651-064dd82ea76a" />
+<img width="882" height="491" alt="D3 with Tooltip3" src="https://github.com/user-attachments/assets/459a5e0d-fc4f-4235-8f16-5cd6e5da3048" />
 
 Priority-focused diagnostic.
 
